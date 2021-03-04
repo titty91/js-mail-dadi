@@ -30,22 +30,24 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
  //1' esercizio
   var mail = prompt('scrivi la tua Mail:');
   var arr= ['pippo@gmail.com', 'ciao@gmail.com', 'bau@gmail.com'];
-  var verifica = false;
+  // var verifica = false;
 
   for (var i=0;i<arr.length;i++){
 
-    console.log (arr[i], verifica);
+    console.log (arr[i]);
     if (arr[i]== mail){
-      verifica = true;
+      // verifica = true;
       console.log ('mail corretta');
+    } else if(arr[i]!= mail){
+      console.log ('mail sbagliata');
     }
   }
 
-  if (verifica){
-    console.log('ok');
-  } else {
-    console.log('no');
-  }
+  // if (verifica){
+  //   console.log('ok');
+  // } else {
+  //   console.log('no');
+  // }
 
 
   document.getElementById('utmail').innerHTML = 'Ciao ' + mail + ' benvenuto';
