@@ -28,19 +28,37 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
  <script>
  //1' esercizio
-  // var mail = prompt('scrivi la tua Mail:');
-  //
-  // document.getElementById('utmail').innerHTML = 'Ciao ' + mail + ' benvenuto';
-  // console.log(mail);
+  var mail = prompt('scrivi la tua Mail:');
+  var arr= ['pippo@gmail.com', 'ciao@gmail.com', 'bau@gmail.com'];
+  var verifica = false;
+
+  for (var i=0;i<arr.length;i++){
+
+    console.log (arr[i], verifica);
+    if (arr[i]== mail){
+      verifica = true;
+      console.log ('mail corretta');
+    }
+  }
+
+  if (verifica){
+    console.log('ok');
+  } else {
+    console.log('no');
+  }
+
+
+  document.getElementById('utmail').innerHTML = 'Ciao ' + mail + ' benvenuto';
+  console.log(mail);
 
 //2' esercizio
   // var arr= [ 1, 2, 3, 4, 5, 6];
-  var number = prompt('inserisci un numero da 1 a 6 e scopri se hai vinto!');
-  document.getElementById('utnumber').innerHTML = number;
-  var
-  if (x<y) {
-
-  }else if (x>y)
+  // var number = prompt('inserisci un numero da 1 a 6 e scopri se hai vinto!');
+  // document.getElementById('utnumber').innerHTML = number;
+  // var
+  // if (x<y) {
+  //
+  // }else if (x>y)
 
 
  </script>
