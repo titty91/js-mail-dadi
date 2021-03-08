@@ -14,6 +14,7 @@
       <div class="row">
         <h1>gioco</h1>
         <h2 id="utnumber">numero</h2>
+        <h2 id="utnuComputer">numero</h2>
       </div>
     </div>
 <!--
@@ -28,34 +29,49 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
  <script>
  //1' esercizio
-  var mail = prompt('scrivi la tua Mail:');
-  var arr= ['pippo@gmail.com', 'ciao@gmail.com', 'bau@gmail.com'];
+ //  var mail = prompt('scrivi la tua Mail:');
+  //var arr= ['pippo@gmail.com', 'ciao@gmail.com', 'bau@gmail.com'];
+  //for (var i=0;i<arr.length;i++){
+  //  console.log (arr[i]);
+  //  if (arr[i]== mail){
+  //    console.log ('mail corretta');
+  //  } else if(arr[i]!= mail){
+  //    console.log ('mail sbagliata');
+  //  }
+  //}
+//  document.getElementById('utmail').innerHTML = 'Ciao ' + mail + ' benvenuto';
+//  console.log(mail);
+var mailUt= prompt('scrivi la tua mail: ');
+var mails = ['pippo@gmail.com', 'bau@gmail.com','miao@gmail.com'];
 
-  for (var i=0;i<arr.length;i++){
+var finded = false;
+      for (var i=0;i<mails.length;i++);{
+        var mail = mails[i];
+        if(mail == mailUt){
+          finded = true;
+          breack;
+        }
+      }
 
-    console.log (arr[i]);
-    if (arr[i]== mail){
-      console.log ('mail corretta');
-
-    } else if(arr[i]!= mail){
-      console.log ('mail sbagliata');
-    }
-  }
-
-  // if (verifica){
-  //   console.log('ok');
-  // } else {
-  //   console.log('no');
-  // }
-
-
-  document.getElementById('utmail').innerHTML = 'Ciao ' + mail + ' benvenuto';
-  console.log(mail);
-
+      if(finded){
+        console.log('mail corretta');
+        document.getElementById('miaclasse').innerHTML = 'Ciao ' + mail + ' benvenuto';
+      }else{
+        console.log('mail sbagliata');
+        document.getElementById('miaclasse').innerHTML = 'Ciao ' + mail + ' non abbiamo trovato la tua mail';
+      }
+//
 //2' esercizio
 // Generare un numero random da 1 a 6,
 // sia per il giocatore sia per il computer.
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+var uTente = Math.floor((Math.random()*6)+1);
+var comPuter = Math.floor((Math.random()*6)+1);
+document.getElementById('utnumber').innerHTML = 'numero Untente: '+uTente ;
+document.getElementById('utnuComputer').innerHTML ='numero Computer: '+comPuter ;
+
+console.log (uTente, comPuter);
 
 
 
